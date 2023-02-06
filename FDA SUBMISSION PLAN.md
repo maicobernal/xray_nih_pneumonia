@@ -122,11 +122,24 @@ Total time of training 120 minutes for 84 epochs, stopped because no validation 
 
 **Final Threshold and Explanation:**
 
-The goal was to minimize false negatives predictions looking for the maximum F1 score. 
-Maximum F1 score achieved with a threshold of 0.634:
+The goal was to minimize false negatives predictions looking for the maximum F1 score (harmonic mean of recall and precision).
 
 * F1 score vs threshold plot: 
 ![](images/f1score.png)
+
+* Final statistics:
+**Threshold selected: 0.634**
+**Recall: 0.50**
+**Precision: 0.48**
+**Specificity: 0.86**
+**Accuracy: 0.79**
+**F1 Score: 0.49**
+
+* Confussion matrix: 
+![](images/matrix.png)
+
+Also to remark, specificity 86% makes the algorithm a useful tool to exclude pneumonia in the clinical setting in which was evaluated and trained. 
+
 
 ### 4. Databases
 XRAY-Helper was trained with a subset of the National Institute of Health (NIH) X-Ray dataset, which is a public dataset of 112120 chest xrays from 30805 unique patients with up to 15 different labels for common radiological findings, including pneumonia. 
